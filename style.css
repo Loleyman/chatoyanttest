@@ -1,0 +1,91 @@
+body {
+    background-color:bisque;
+}
+
+.topbar {
+    margin: -8px;
+    margin-bottom: 0px;
+    background-color:beige;
+}
+
+.logo {
+    display: block;
+    max-width: 500px;
+    width: 70%;
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+.slogan {
+    margin-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.coverdiv {
+    position: relative;
+    margin: auto;
+    max-width: 570px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 570px;
+    opacity: 0%;
+    background-color: burlywood;
+    transition: 0.3s;
+}
+
+.overlay:hover {
+    opacity: 90%;
+    transition: 0.3s;
+}
+
+.covertext {
+    display: block;
+    text-align: center;
+    padding-top: 70%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 21px;
+}
+
+.issue1:visited {
+    color: black;
+}
+
+footer {
+    background-color: beige;
+    margin: -8px;
+    padding-bottom: 10px;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px;
+}
+
+hr {
+    height: 4px;
+    background-color: burlywood;
+    border-style: groove;
+    border-color: darksalmon;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
