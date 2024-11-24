@@ -1,91 +1,97 @@
 body {
-    background-color:bisque;
+    overflow: hidden;
 }
 
-.topbar {
-    margin: -8px;
-    margin-bottom: 0px;
-    background-color:beige;
-}
-
-.logo {
-    display: block;
-    max-width: 500px;
-    width: 70%;
-    padding-top: 20px;
-    margin-right: auto;
-    margin-left:auto;
-}
-
-.slogan {
-    margin-top: 5px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.cover {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: auto;
-    transition: 0.3s;
-}
-
-.coverdiv {
-    position: relative;
-    margin: auto;
-    max-width: 570px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.overlay {
+.intro {
+    margin: 0;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 570px;
-    opacity: 0%;
-    background-color: burlywood;
-    transition: 0.3s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.overlay:hover {
-    opacity: 90%;
-    transition: 0.3s;
+.line {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: max(35%, 70px);
+    background-color:white;
+    border-style: solid;
+    border-color: black;
+    border-width: 0;
+    border-left-width: max(0.5vw, 5px);
+    z-index: 2;
+
+    transform-origin: bottom;
+    animation: lineanim 2s ease 1s 1 normal forwards;
 }
 
-.covertext {
-    display: block;
+.title {
+    z-index: 1;
+    color: #75726f;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px #d49e2c, 0px 0px rgba(212, 158, 44, 0.5);
+    animation: titleanim 0.5s ease 4s 1 normal forwards;
+    font-family: "Shrikhand";
+    font-size: max(8vw, 50px);
+}
+
+.desc {
+    opacity: 0;
+    margin: 0;
+    transform: translateY(-700%);
+    font-family: "League Spartan";
+    font-weight: 200;
+    font-size: max(2vw, 20px);
+    text-wrap: nowrap;
     text-align: center;
-    padding-top: 70%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 21px;
+    animation: descanim 0.5s ease 4s 1 normal forwards;
 }
 
-.issue1:visited {
-    color: black;
+@keyframes lineanim {
+    0% {
+        transform: translate(-50%, -50%) scale(1, 1);
+    }
+
+    70% {
+        transform: translate(50%, -50%) scale(1, 1);
+    }
+
+    99% {
+        transform: translate(50%, -50%) scale(1, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50%, -50%) scale(0, 0);
+        opacity: 0;
+    }
 }
 
-footer {
-    background-color: beige;
-    margin: -8px;
-    padding-bottom: 10px;
+@keyframes titleanim {
+    0% {
+        color: #75726f;
+        text-shadow: 0px 0px #d49e2c, 0px 0px rgba(212, 158, 44, 0.5);
+    }
+
+    100% {
+        transform: translateY(-50px);
+        color: #f5f1e9;
+        text-shadow: 5px 5px #d49e2c, 10px 10px rgba(212, 158, 44, 0.5);
+    }
 }
 
-footer p {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 5px;
-}
+@keyframes descanim {
+    0% {
+        transform: translateY(-700%);
+        opacity: 0;
+    }
 
-hr {
-    height: 4px;
-    background-color: burlywood;
-    border-style: groove;
-    border-color: darksalmon;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    100% {
+        transform: translateY(-500%);
+        opacity: 1;
+    }
 }
